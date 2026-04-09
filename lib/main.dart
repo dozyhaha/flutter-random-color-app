@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_random_color_app/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MainApp());
 }
 /// Application root widget.
-class MyApp extends StatelessWidget {
+class MainApp extends StatelessWidget {
   /// Application root widget.
-  const MyApp({super.key});
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
