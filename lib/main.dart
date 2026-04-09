@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_random_color_app/home_page.dart';
 
-void main() {
-  runApp(const MainApp());
-}
 /// Application root widget.
 class MainApp extends StatelessWidget {
   /// Application root widget.
@@ -15,4 +12,8 @@ class MainApp extends StatelessWidget {
       home: const HomePage(),
     );
   }
+}
+
+void main() {
+  runApp(const MainApp());
 }
