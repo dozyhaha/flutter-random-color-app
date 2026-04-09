@@ -2,15 +2,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 /// Home screen with random background color change on tap.
-class HomePage extends StatefulWidget{
+class HomePage extends StatefulWidget {
   /// Creates HomePage widget.
-  const HomePage ({super.key});
-
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
-
 }
+
 class _HomePageState extends State<HomePage> {
   Color _backgroundColor = Colors.white;
 
@@ -30,6 +29,7 @@ class _HomePageState extends State<HomePage> {
       );
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
