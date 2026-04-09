@@ -14,15 +14,19 @@ class HomePage extends StatefulWidget{
 class _HomePageState extends State<HomePage> {
   Color _backgroundColor = Colors.white;
 
+  static const int _maxColorValue = 256;
+  static const int _alphaValue = 255;
+  static const int _animationDurationMs = 300;
+
   void _changeColor() {
     final random = Random();
 
     setState(() {
       _backgroundColor = Color.fromARGB(
-        255,
-        random.nextInt(256),
-        random.nextInt(256),
-        random.nextInt(256),
+        _alphaValue,
+        random.nextInt(_maxColorValue),
+        random.nextInt(_maxColorValue),
+        random.nextInt(_maxColorValue),
       );
     });
   }
@@ -31,7 +35,7 @@ class _HomePageState extends State<HomePage> {
     return GestureDetector(
       onTap: _changeColor,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: _animationDurationMs),
         color: _backgroundColor,
         child: Center(
           child: Text(
